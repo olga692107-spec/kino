@@ -106,6 +106,7 @@ grid-area: my-header;
     line-height: 117%;
 }
 
+
 .header_nav a:not(:last-child) {
     margin-right: 2rem;
 }
@@ -181,6 +182,7 @@ grid-area: my-header;
 .main-display_trailer:hover {
     transform: scale(1.05);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;  /* Плавность */
 }
 
 .main-display_views {
@@ -423,10 +425,16 @@ grid-area: my-header;
     margin-left: .4rem;
 }
 
+.header_nav a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
 
-
-
-
+.header_nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px; /* Отступ от текста */
+    text-decoration-thickness: 2px; /* Толщина линии */
+}
 
 
 
