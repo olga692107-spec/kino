@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* reset css*/
 *,
 *::before,
@@ -12,6 +15,7 @@ body{
     font-weight:normal;
     background: #17161B;
     color: #FFFFFF;
+    
 }
 
 img {
@@ -67,9 +71,9 @@ grid-area: my-header;
 .grid {
     display: grid;
     grid-template-areas: 
-    "my-header my-header"
-    "my-aside my-main"
-    "my-aside my-main";
+    "my-header my-header my-header"
+    "my-aside my-main my-main"
+    "my-aside my-main my-main";
     grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
     gap: 8rem 5.9rem;
 }
@@ -87,6 +91,8 @@ grid-area: my-header;
 
 .header_logo {
     font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 117%;
     margin-right: 7rem;
 }
 
@@ -96,6 +102,8 @@ grid-area: my-header;
 
 .header_nav a {
     font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 117%;
 }
 
 .header_nav a:not(:last-child) {
@@ -121,6 +129,7 @@ grid-area: my-header;
     padding-left: 1rem;
     padding-right: 4rem;
     font-size: 2rem;
+    line-height: 115%;
     color:#FFFFFF;
 }
 
@@ -137,10 +146,12 @@ grid-area: my-header;
 
 .header_hour {
     font-size: 2rem;
+    line-height: 115%;
 }
 
 .header_days {
     font-size: 1.2rem;
+    line-height: 117%;
 }
 
 .header_personal {
@@ -148,6 +159,285 @@ grid-area: my-header;
     height: 6rem;
     border-radius: 50%;
 }
+
+
+.main-display_trailer {
+    position: relative;
+    width: 98.5%;
+    height: 20.2rem;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(../img/45ac9d9b25c2211e374493f0e4c02e9160edf88c.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center;
+    border-radius: 1.6rem;
+    padding: 1.9rem 0 1.9rem 1.9rem;
+     
+}
+
+/* Hover эффект для главного трейлера */
+.main-display_trailer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.7);
+}
+
+.main-display_views {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 119%;
+}
+
+.main-display_header {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 150%;
+
+}
+
+.main-display_data {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+
+}
+
+.button-play_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    width:8.1rem;
+    height: 8.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+     
+}
+
+.button-play {
+    width: 0;
+    height: 0;
+    border-top: 1.5rem solid transparent;
+    border-left: 2.5rem solid #FFFFFF;
+    border-bottom: 1.5rem solid transparent;
+    border-radius: 0.2rem;
+
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    padding-right: 1rem;
+}
+
+.title_left, .title_rigth {
+    display: flex;
+    align-items: center;
+}
+
+.title_main {
+    font-size: 2rem;
+    line-height: 115%;
+}
+
+.title_count {
+    margin-left: 2rem;
+    color: rgba(255, 255, 255, 0.2); 
+    font-size: 2rem;
+    line-height: 115%;
+    padding-top: .3rem;
+
+
+
+}
+
+.title_rigth span {
+    font-size: 1.4rem;
+    line-height: 114%;
+    color: rgba(255, 255, 255, 0.2);
+
+}
+
+.title_rigth img {
+    width: 2rem;
+    height: 1.6rem;
+    margin-left: 0.4rem;
+}
+
+
+.trending, .popular {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.9rem 0 1.9rem 0rem;
+}
+
+.trending_item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 47%;
+    height: 25.1rem;
+    border-radius: 1.6rem;
+    background: url(../img/fa184e01028c2fdc867dd9c193d74a7db550a42a.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    
+
+}
+
+.tranding_footer, .popular_footer{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1.8rem 1rem 1.8rem 6.4rem;
+    border-radius: 1.6rem;
+    background: rgba(255, 255, 255, 0.);
+}
+
+.popular_footer {
+    background:rgba(255, 255, 255, 0.4);
+    padding: .8rem 1.9rem .8rem 6.4rem;
+}
+
+.trending_header {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+.trending_data {
+    font-size: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+
+.trending_time {
+    padding: .4rem;
+    background:#FFFFFF;
+    border-radius: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 120%;
+    color: black;
+
+}
+
+.trending_plash {
+    position: absolute;
+    top:2rem;
+    left:2rem;
+    font-size: 1.4rem;
+    line-height: 114%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1.6rem;
+    padding: .4rem 1.3rem;
+}
+
+.small {
+    width: 5rem;
+    height: 5rem;
+    left: 7%;
+}
+
+.small-plus {
+    width: 3rem;
+    height: 3rem;
+    left: 10%;
+}
+
+.button-play_wrap.small  .button-play {
+    width: 0;
+    height: 0;
+    border-top: 1rem solid transparent;
+    border-left: 1.5rem solid #FFFFFF;
+    border-bottom: 1rem solid transparent;
+    border-radius: 0.2rem;
+
+}
+
+.button-play_wrap.small-plus  .button-play {
+    width: 0;
+    height: 0;
+    border-top: 0.5rem solid transparent;
+    border-left: 1rem solid #FFFFFF;
+    border-bottom: .5rem solid transparent;
+    border-radius: 0.2rem;
+
+}
+
+.popular_item {
+    display: flex;
+    align-items: flex-end;
+    width: 30%;
+    height: 19.2rem;
+    border-radius: 1.6rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../img/ddc9e8c0aa5b09456ffd69725be76555ead198e6.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.trending_item:hover,
+.popular_item:hover {
+    transform: scale(1.02);  /* Легкое увеличение */
+    transition: all 0.3s ease;  /* Плавность */
+    
+}
+
+
+
+.popular_header {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.popular_date {
+    font-weight: 700;
+    font-size: .8rem;
+    line-height: 113%;
+}
+
+.popular_rating {
+    display: flex;
+    align-items:center;
+}
+
+.popular_rating span {
+     font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+    margin-left: .4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*сетка*/
