@@ -15,7 +15,7 @@ body{
     font-weight:normal;
     background: #17161B;
     color: #FFFFFF;
-    
+      
 }
 
 img {
@@ -58,6 +58,7 @@ input {
 
 .header {
 grid-area: my-header;
+box-shadow: 0.4rem 1rem rgba(255, 255, 255, 0.7);
 }
 
 .main {
@@ -74,8 +75,8 @@ grid-area: my-header;
     "my-header my-header my-header"
     "my-aside my-main my-main"
     "my-aside my-main my-main";
-    grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
-    gap: 8rem 5.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(12rem,1fr));
+    gap: 3rem ;
 }
 
 .grid-init {
@@ -161,6 +162,10 @@ grid-area: my-header;
     border-radius: 50%;
 }
 
+
+.main-display{
+    padding-top: 5rem;
+}
 
 .main-display_trailer {
     position: relative;
@@ -460,8 +465,42 @@ grid-area: my-header;
 
 
 .aside {
-    padding-right: 5.9rem;
+    padding-right: 3.6rem;
+    position: relative;
+    
 
+}
+
+.aside::after{
+    content: url(../img/Polygon\ 4.png);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 2.2rem;
+    height: 2.6rem;
+    border-radius:2rem;
+    background: #FCFCFE;
+    position: absolute;
+    top: 10.7rem;
+    right: 2.5rem;
+
+
+
+}
+
+.aside_top {
+    padding-right: 2.3rem;
+    padding-left: 2.4rem;
+    padding-bottom: 4rem;
+    background:#17161B;
+    padding-top: 5rem;
+    border-right: .1rem solid #1C1B1F;
+}
+
+.aside_wrap {
+    background: rgba(255, 255, 255, 0.02);
+    margin-left: -2.4rem;
+    cursor: pointer;
 }
 
 .aside_title {
@@ -538,7 +577,7 @@ grid-area: my-header;
 }
 
 .aside_item:nth-child(3) {
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
     margin-top: 3rem;
 
 }
@@ -556,6 +595,26 @@ grid-area: my-header;
     z-index: 10;
 }
 
+
+
+.aside_footer-botton {
+    position: relative;
+    
+}
+
+.aside_footer-botton {
+    content: '';
+    display: block;
+    width: 6.5rem;
+    height: 0.1rem;
+    background: red;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    transform: translate(0, 50%);
+
+}
+
 .aside_item-name {
     margin-bottom: .5rem;
     font-weight: 700;
@@ -570,8 +629,8 @@ grid-area: my-header;
 }
 
 .aside_botton {
-    padding: 2.5rem 0  2rem 2rem;
-    background:rgba(0, 0, 0, 0.2);
+    padding: 2.5rem 0  2rem 2.4rem;
+    /* background:rgba(0, 0, 0, 0.2); */
 }
 
 .aside_favorite-text {
@@ -637,9 +696,32 @@ grid-area: my-header;
     margin-right: 2.5rem;
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 3rem 0;
+    z-index: 1000;
+    display: none;
+}
+
+.modal_inner {
+    width: 100rem;
+    height: 60rem;
+}
 
 
-
+.active {
+    display: flex;
+}
 
 
 
